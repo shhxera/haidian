@@ -320,16 +320,16 @@ code {
 <ul>
 <li>Official text facts: 43.6 km2 coordinated research area, 11.4 km2 overall design area, and 368.4 ha key detailed-design area. These are announcement values, not polygon-derived survey facts <sup class="evidence evidence-source" data-evidence-kind="source" data-evidence-value="OFFICIAL-ANNOUNCEMENT" title="来源：OFFICIAL-ANNOUNCEMENT">来源</sup> <sup class="evidence evidence-data" data-evidence-kind="data" data-evidence-value="design_brief.json" title="空间数据：design_brief.json">空间数据</sup>.</li>
 <li>Provisional derived values: site area 11,412,825 m2, key-area union 3,692,893 m2, green ratio 33.2%, full land-use coverage, and 66 conceptual building features. These are recalculated from written GeoJSON in EPSG:4548 and remain provisional <sup class="evidence evidence-source" data-evidence-kind="source" data-evidence-value="BOUNDARY-SOURCE" title="来源：BOUNDARY-SOURCE">来源</sup> <sup class="evidence evidence-metric" data-evidence-kind="metric" data-evidence-value="site_area_sqm" title="指标：site_area_sqm">指标</sup>.</li>
-<li>Unknown baselines: 15-minute service coverage, AI enterprise density, talent-housing supply, traffic demand, parking, utility capacity, flood performance, and operational KPI baselines. They are not treated as facts; see <code>baseline_registry.json</code>.</li>
+<li>Unknown baselines: 15-minute service coverage, AI enterprise density, talent-housing supply, traffic demand, parking, utility capacity, flood performance, and operational KPI baselines. They are not treated as facts; see the <code>metrics.json.baseline_registry</code> section.</li>
 <li>Conceptual targets: annual visitors, enterprise retention, scenario adoption, contributor counts and safety red lines are future operator targets, not observed performance. Each requires a data owner, denominator, collection period, audit method and annual review before implementation.</li>
 </ul>
 <ul>
 <li>公告任务逐条映射：见 <code>compliance_matrix.json</code>（1.3.1-1.3.11 与 agent.1-agent.6 全覆盖，含章节/图层/指标/图纸证据链）。</li>
 <li>十条共创原则执行情况（任务书 <sup class="evidence evidence-source" data-evidence-kind="source" data-evidence-value="AGENT-TASKBOOK" title="来源：AGENT-TASKBOOK">来源</sup>）：公共利益优先（全部建议为公共空间与公共数据服务）、公开资料边界（仅用 registry 登记资料）、概念建议属性（全文标注）、AI 原生创新（场景全部 AI 原生）、结构化与可读并重（JSON+MD+HTML+PDF 双语）、生成方法披露（agent.json 声明模型，sources.json 记录来源）、人类最终判断（本包为建议）、公共知识沉淀（成果开源）、贡献可记忆（GitHub 名刻碑）、人本治理（无障碍与适老化设计）。</li>
-<li><strong>权利台账</strong>：逐资产类别的权利与待人工核验记录见 <code>rights_ledger.json</code>；它不把“公开可访问”自动升级为“可再分发”。</li>
-<li><strong>基线登记</strong>：<code>baseline_registry.json</code> 区分官方事实、临时几何派生值、概念目标与完全未知基线；未验证的 15 分钟生活圈、企业密度、人才住房和运营 KPI 不得被解释为观察事实。</li>
-<li><strong>人工复核清单</strong>：<code>human_review_checklist.md</code> 明确空间、规划、无障碍、AI 治理、权利、来源、双语和逐页 PDF 复核项；自动 gate PASS 不替代这些复核。</li>
-<li><strong>证据图谱</strong>：<code>evidence_atlas.md</code> 明确哪些图层是官方文字/临时上下文、哪些是概念干预、哪些专业证据仍缺失。</li>
+<li><strong>权利台账</strong>：逐资产类别的权利与待人工核验记录见 <code>sources.json.rights_ledger</code>；它不把“公开可访问”自动升级为“可再分发”。</li>
+<li><strong>基线登记</strong>：the <code>metrics.json.baseline_registry</code> section 区分官方事实、临时几何派生值、概念目标与完全未知基线；未验证的 15 分钟生活圈、企业密度、人才住房和运营 KPI 不得被解释为观察事实。</li>
+<li><strong>人工复核清单</strong>：<code>assumptions.json.human_review_checklist</code> 明确空间、规划、无障碍、AI 治理、权利、来源、双语和逐页 PDF 复核项；自动 gate PASS 不替代这些复核。</li>
+<li><strong>证据图谱</strong>：<code>compliance_matrix.json.evidence_atlas</code> 明确哪些图层是官方文字/临时上下文、哪些是概念干预、哪些专业证据仍缺失。</li>
 </ul>
 <h2>风险、版权与合规说明</h2>
 <p><strong>修订记录</strong>：v1.3（2026-08-14）——执行优先改进计划：新增权利台账、基线与 claim audit、证据图谱、人工复核要求；逐案登记六个 benchmark URL；将未验证 KPI 明确降级为目标；补充 existing/context 与 conceptual intervention 的证据边界。</p>
@@ -349,7 +349,7 @@ code {
 <li><code>brief/site-package/design_brief.json</code>、<code>agent_taskbook.json</code>、<code>allowed_design_space.json</code>、<code>sources.json</code>、<code>enums/</code>、<code>ranges/planning_limits.json</code>、<code>schemas/</code>、<code>standards/standards.json</code>（含 7 项标准参考快照）、<code>visual_style_recommendations.json</code> <sup class="evidence evidence-source" data-evidence-kind="source" data-evidence-value="SOURCE-REGISTRY" title="来源：SOURCE-REGISTRY">来源</sup></li>
 <li><code>brief/site-package/geometry/provisional_boundaries.geojson</code>（provisional）<sup class="evidence evidence-source" data-evidence-kind="source" data-evidence-value="BOUNDARY-SOURCE" title="来源：BOUNDARY-SOURCE">来源</sup></li>
 <li><code>data/source_registry.json</code>（9 条登记来源）</li>
-<li><code>rights_ledger.json</code>、<code>baseline_registry.json</code>、<code>human_review_checklist.md</code>、<code>evidence_atlas.md</code></li>
+<li><code>sources.json.rights_ledger</code>、the <code>metrics.json.baseline_registry</code> section、<code>assumptions.json.human_review_checklist</code>、<code>compliance_matrix.json.evidence_atlas</code></li>
 <li>公开对标案例：<code>sources.json</code> 的 <code>BENCHMARK-SET</code>（6 条逐案 URL/发布者/claim scope/licence limitation；background-only）</li>
 <li>合并方案参考：silvaling/jingzhang-stack（同行参考，未复制内容）</li>
 </ul>
